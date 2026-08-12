@@ -1,0 +1,97 @@
+LicenseKit — Proprietary Software License
+Copyright (c) 2026 Duong Duc Trong. All rights reserved.
+
+This software and its accompanying documentation (the "Software") are the
+confidential and proprietary property of Duong Duc Trong (the "Licensor"). The
+Software is licensed, not sold. No ownership rights are transferred by this
+agreement.
+
+1. GRANT OF LICENSE
+
+   No right to use, copy, modify, or distribute the Software is granted except
+   under a separate written commercial license agreement signed by the Licensor
+   (a "Commercial Agreement"). If you hold a valid Commercial Agreement, its
+   terms govern your use of the Software, and this file describes the default
+   position that applies in the absence of such an agreement.
+
+   Absent a Commercial Agreement, you are granted a limited, non-exclusive,
+   non-transferable, revocable right solely to view the source code for the
+   purpose of evaluating whether to obtain a Commercial Agreement. This
+   evaluation right does not permit use of the Software in any product,
+   service, or internal system, whether or not that use is commercial.
+
+2. RESTRICTIONS
+
+   Except as expressly permitted by a Commercial Agreement, you may not:
+
+   a. use the Software, in whole or in part, in any product, service,
+      application, or internal system;
+   b. copy, reproduce, publish, or host the Software or any part of it;
+   c. modify, adapt, translate, or create derivative works from the Software;
+   d. distribute, sublicense, lease, rent, lend, sell, or otherwise transfer
+      the Software or any rights in it to any third party;
+   e. reverse engineer, decompile, or disassemble any compiled form of the
+      Software, except to the extent this restriction is prohibited by
+      applicable law;
+   f. remove, obscure, or alter any copyright, trademark, or other proprietary
+      notice contained in the Software;
+   g. use the Software to build, train, or evaluate a competing product, or to
+      train any machine learning model.
+
+3. CONTRIBUTIONS
+
+   Any contribution you submit to the Software is provided to the Licensor on a
+   royalty-free, perpetual, irrevocable basis, and you assign to the Licensor
+   all rights necessary for the Licensor to use, modify, and distribute that
+   contribution as part of the Software. You represent that you have the right
+   to make such a submission.
+
+4. CONFIDENTIALITY
+
+   The Software constitutes confidential information of the Licensor. You must
+   not disclose the Software or any part of it to any third party except as
+   expressly permitted by a Commercial Agreement, and you must protect it with
+   at least the care you use for your own confidential information.
+
+5. TERM AND TERMINATION
+
+   This license takes effect when you first access the Software and terminates
+   automatically, without notice, upon any breach of its terms. The Licensor
+   may additionally terminate the evaluation right in Section 1 at any time.
+   Upon termination you must immediately cease all use of the Software and
+   destroy every copy in your possession or control. Sections 2 through 8
+   survive termination.
+
+6. NO WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NONINFRINGEMENT.
+
+   Without limiting the foregoing: the Software provides software licensing and
+   anti-piracy mechanisms. No client-side mechanism can prevent a determined
+   attacker from modifying a compiled application to bypass it. The Licensor
+   makes no representation that use of the Software will prevent unauthorised
+   use, copying, or distribution of your own products, and does not warrant
+   that the Software is free of defects or that its operation will be
+   uninterrupted or error-free.
+
+7. LIMITATION OF LIABILITY
+
+   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE
+   LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN
+   ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN
+   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE,
+   INCLUDING WITHOUT LIMITATION ANY LOST PROFITS, LOST REVENUE, LOST OR
+   UNCOLLECTED LICENCE FEES, LOSS OF DATA, OR BUSINESS INTERRUPTION, EVEN IF
+   ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+8. GENERAL
+
+   If any provision of this license is held unenforceable, that provision shall
+   be limited or severed to the minimum extent necessary and the remainder
+   shall remain in full force. Failure to enforce any provision is not a waiver
+   of it. This license is the entire agreement concerning the Software except
+   where superseded by a Commercial Agreement.
+
+For commercial licensing enquiries, contact the Licensor.
