@@ -58,7 +58,7 @@ validation, storage, and models at once.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/gumbracelet/LicenseKit-SDK.git", from: "1.0.0")
+    .package(url: "https://github.com/gumbracelet/LicenseKit-SDK.git", from: "1.0.1")
 ],
 targets: [
     .target(name: "YourApp", dependencies: [
@@ -79,13 +79,13 @@ If you vendor binary targets by hand rather than depending on the package:
 ```swift
 .binaryTarget(
     name: "LicenseKit",
-    url: "https://github.com/gumbracelet/LicenseKit-SDK/releases/download/1.0.0/LicenseKit.xcframework.zip",
-    checksum: "b507c8ad219afcf874609d6c258dc1b83bbd834d851e164bc78badd6ab25b27c"
+    url: "https://github.com/gumbracelet/LicenseKit-SDK/releases/download/1.0.1/LicenseKit.xcframework.zip",
+    checksum: "b43081c4f4f6eae505ac2a729312c2a0c9266bb0c73af3489003a44b4fd40738"
 )
 ```
 
 Every module is published this way. Checksums for all of them are in
-[`checksums.txt`](https://github.com/gumbracelet/LicenseKit-SDK/releases/download/1.0.0/checksums.txt),
+[`checksums.txt`](https://github.com/gumbracelet/LicenseKit-SDK/releases/download/1.0.1/checksums.txt),
 attached to each release, and in the `.binaryTarget` entries in `Package.swift`.
 
 </details>
@@ -96,9 +96,9 @@ attached to each release, and in the `.binaryTarget` entries in `Package.swift`.
 You need this only to issue licenses — apps that merely validate them do not.
 
 ```sh
-curl -fsSLO https://github.com/gumbracelet/LicenseKit-SDK/releases/download/1.0.0/licensekit.artifactbundle.zip
+curl -fsSLO https://github.com/gumbracelet/LicenseKit-SDK/releases/download/1.0.1/licensekit.artifactbundle.zip
 unzip -q licensekit.artifactbundle.zip
-install licensekit.artifactbundle/licensekit-1.0.0-macos/bin/licensekit /usr/local/bin/
+install licensekit.artifactbundle/licensekit-1.0.1-macos/bin/licensekit /usr/local/bin/
 licensekit --help
 ```
 
