@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-label="LicenseKit — a license is signed once by the vendor and verified everywhere">
+  <title>LicenseKit</title>
+
+  <!-- The diagram is the actual pipeline, not decoration: a claim set is
+       canonicalised, signed with a private key, optionally sealed, and then
+       verified on device with a public key. The private key never crosses the
+       dashed boundary — that is the whole security argument. -->
+
+  <rect width="1200" height="440" rx="14" fill="#0a0a0c"/>
+  <rect x="0.5" y="0.5" width="1199" height="439" rx="14" fill="none" stroke="#1d1d22"/>
+
+  <!-- Title -->
+  <text x="60" y="72" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="30" font-weight="600" fill="#f2f2f5">LicenseKit</text>
+  <text x="60" y="102" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="15" fill="#7c7c88">Commercial licensing for every Apple platform</text>
+
+  <!-- Trust boundary -->
+  <line x1="672" y1="140" x2="672" y2="392" stroke="#3a3a44" stroke-width="1" stroke-dasharray="5 6"/>
+  <text x="662" y="384" text-anchor="end" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="12" fill="#5c5c68">vendor</text>
+  <text x="682" y="384" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="12" fill="#5c5c68">customer device</text>
+
+  <!-- ── Vendor side ─────────────────────────────────────────────── -->
+
+  <!-- Claim set -->
+  <rect x="60" y="168" width="150" height="96" rx="10" fill="none" stroke="#2f2f38"/>
+  <text x="135" y="200" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#e8e8ee">License</text>
+  <text x="135" y="222" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="11.5" fill="#7c7c88">product · policy</text>
+  <text x="135" y="240" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="11.5" fill="#7c7c88">entitlements</text>
+
+  <path d="M218 216 L262 216" stroke="#3a3a44" stroke-width="1.5"/>
+  <path d="M256 211 L264 216 L256 221 Z" fill="#3a3a44"/>
+
+  <!-- Canonical bytes -->
+  <rect x="270" y="168" width="150" height="96" rx="10" fill="none" stroke="#2f2f38"/>
+  <text x="345" y="200" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#e8e8ee">Canonical bytes</text>
+  <text x="345" y="222" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10.5" fill="#7c7c88">sorted · omitted nulls</text>
+  <text x="345" y="240" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10.5" fill="#7c7c88">byte-stable forever</text>
+
+  <path d="M428 216 L472 216" stroke="#3a3a44" stroke-width="1.5"/>
+  <path d="M466 211 L474 216 L466 221 Z" fill="#3a3a44"/>
+
+  <!-- Sign -->
+  <rect x="480" y="168" width="150" height="96" rx="10" fill="none" stroke="#3da97a"/>
+  <text x="555" y="200" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8fe3bd">Sign</text>
+  <text x="555" y="222" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="11.5" fill="#5f9e83">Ed25519</text>
+  <text x="555" y="240" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="11.5" fill="#5f9e83">then seal</text>
+
+  <!-- Private key, staying put -->
+  <text x="555" y="300" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="11.5" fill="#5c5c68">private key</text>
+  <text x="555" y="318" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="11.5" fill="#5c5c68">never ships</text>
+  <path d="M555 268 L555 286" stroke="#3a3a44" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- Crossing the boundary -->
+  <path d="M638 216 L744 216" stroke="#3a3a44" stroke-width="1.5"/>
+  <path d="M738 211 L746 216 L738 221 Z" fill="#3a3a44"/>
+  <text x="691" y="204" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10.5" fill="#5c5c68">.license</text>
+
+  <!-- ── Device side ─────────────────────────────────────────────── -->
+
+  <rect x="752" y="168" width="150" height="96" rx="10" fill="none" stroke="#3da97a"/>
+  <text x="827" y="200" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8fe3bd">Verify</text>
+  <text x="827" y="222" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="11.5" fill="#5f9e83">public key</text>
+  <text x="827" y="240" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="11.5" fill="#5f9e83">safe to embed</text>
+
+  <path d="M910 216 L954 216" stroke="#3a3a44" stroke-width="1.5"/>
+  <path d="M948 211 L956 216 L948 221 Z" fill="#3a3a44"/>
+
+  <rect x="962" y="168" width="178" height="96" rx="10" fill="none" stroke="#2f2f38"/>
+  <text x="1051" y="200" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#e8e8ee">Rule chain</text>
+  <text x="1051" y="222" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="11.5" fill="#7c7c88">expiry · seats · grace</text>
+  <text x="1051" y="240" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="11.5" fill="#7c7c88">→ ValidationReport</text>
+
+  <!-- Providers feeding revocation back in -->
+  <path d="M1051 268 L1051 316 L827 316 L827 272" fill="none" stroke="#2f2f38" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <path d="M822 278 L827 270 L832 278 Z" fill="#2f2f38"/>
+  <text x="939" y="338" text-anchor="middle" font-family="ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif" font-size="11.5" fill="#5c5c68">providers refresh status · revocation · seats</text>
+
+  <!-- Footer -->
+  <text x="60" y="404" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11.5" fill="#4e4e58">iOS · macOS · tvOS · watchOS · visionOS   —   Swift 6, strict concurrency, no dependencies</text>
+</svg>
