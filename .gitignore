@@ -1,0 +1,7 @@
+.DS_Store
+
+# SwiftPM build products and resolved artifacts. The demo under Examples/
+# downloads the release XCFrameworks into its own .build directory.
+.build/
+.swiftpm/
+Package.resolved

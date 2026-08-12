@@ -129,6 +129,28 @@ licensekit verify  --in demo.license \
 Now change a single byte of `demo.license` in a text editor and run `verify`
 again. That rejection is the whole product.
 
+## Or run the demo app
+
+`Examples/LicenseKitDemo` is a real macOS app that integrates this package the
+same way yours will — through the released XCFrameworks, no source checkout.
+
+```sh
+cd Examples/LicenseKitDemo
+swift run LicenseKitDemo    # the app
+swift test                  # 50 integration tests, no network
+```
+
+It licenses a fictional photo editor, and a stand-in licensing service runs
+in-process so you can break the backend on demand: revoke a purchase, exhaust the
+seats, drop the network, return a malformed body. The Status screen shows the
+rule-by-rule `ValidationReport` behind every verdict, and the Setup screen rebuilds
+the configuration live so you can watch one license be accepted or rejected purely
+because the host changed its mind about verification.
+
+Start reading at `Sources/LicenseKitDemo/DemoRuntime.swift` — that one function is
+the entire integration. See [its README](Examples/LicenseKitDemo/README.md) for a
+guided tour.
+
 ## Quick start
 
 Three steps: generate keys once, issue a license per customer, validate on device.
