@@ -55,37 +55,37 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "LicenseKit",
-            url: "https://github.com/gumbracelet/LicenseKit-SDK/releases/download/1.0.1/LicenseKit.xcframework.zip",
+            url: "https://github.com/atcharm/LicenseKit-SDK/releases/download/1.0.1/LicenseKit.xcframework.zip",
             checksum: "b43081c4f4f6eae505ac2a729312c2a0c9266bb0c73af3489003a44b4fd40738"
         ),
         .binaryTarget(
             name: "LicenseKitCore",
-            url: "https://github.com/gumbracelet/LicenseKit-SDK/releases/download/1.0.1/LicenseKitCore.xcframework.zip",
+            url: "https://github.com/atcharm/LicenseKit-SDK/releases/download/1.0.1/LicenseKitCore.xcframework.zip",
             checksum: "3f4abe32843483c522d9f1774a87c2cc9322fb58585e91929a2708320127262c"
         ),
         .binaryTarget(
             name: "LicenseKitCrypto",
-            url: "https://github.com/gumbracelet/LicenseKit-SDK/releases/download/1.0.1/LicenseKitCrypto.xcframework.zip",
+            url: "https://github.com/atcharm/LicenseKit-SDK/releases/download/1.0.1/LicenseKitCrypto.xcframework.zip",
             checksum: "0083434118832070a4fb880ddd5b85d4cb8921b04106e16017a66f64fed48879"
         ),
         .binaryTarget(
             name: "LicenseKitFormats",
-            url: "https://github.com/gumbracelet/LicenseKit-SDK/releases/download/1.0.1/LicenseKitFormats.xcframework.zip",
+            url: "https://github.com/atcharm/LicenseKit-SDK/releases/download/1.0.1/LicenseKitFormats.xcframework.zip",
             checksum: "0c49aec350778d7db182659172f2695bc51303d644af199265dc08d316557c73"
         ),
         .binaryTarget(
             name: "LicenseKitProviders",
-            url: "https://github.com/gumbracelet/LicenseKit-SDK/releases/download/1.0.1/LicenseKitProviders.xcframework.zip",
+            url: "https://github.com/atcharm/LicenseKit-SDK/releases/download/1.0.1/LicenseKitProviders.xcframework.zip",
             checksum: "503b72b79bab0dde277ed33672c0b26d164c1eb5036f1b02f4583c467c5ce3a9"
         ),
         .binaryTarget(
             name: "LicenseKitStorage",
-            url: "https://github.com/gumbracelet/LicenseKit-SDK/releases/download/1.0.1/LicenseKitStorage.xcframework.zip",
+            url: "https://github.com/atcharm/LicenseKit-SDK/releases/download/1.0.1/LicenseKitStorage.xcframework.zip",
             checksum: "f674a32df91c1ca1d42f97acd2d068d9e4ff5dc7f44e3004a8d5aafc40299816"
         ),
         .binaryTarget(
             name: "LicenseKitVendor",
-            url: "https://github.com/gumbracelet/LicenseKit-SDK/releases/download/1.0.1/LicenseKitVendor.xcframework.zip",
+            url: "https://github.com/atcharm/LicenseKit-SDK/releases/download/1.0.1/LicenseKitVendor.xcframework.zip",
             checksum: "a1905bc8021427d3a25c40906c90ca8dfcecc18bdf7aeeb2d36a08f3afb0f5da"
         ),
     ]

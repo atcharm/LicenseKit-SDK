@@ -64,7 +64,7 @@ utility — you need it to issue licenses, not to validate them — and it is at
 to every release:
 
 ```sh
-curl -fsSLO https://github.com/gumbracelet/LicenseKit-SDK/releases/download/1.0.1/licensekit.artifactbundle.zip
+curl -fsSLO https://github.com/atcharm/LicenseKit-SDK/releases/download/1.0.1/licensekit.artifactbundle.zip
 unzip -q licensekit.artifactbundle.zip
 install licensekit.artifactbundle/licensekit-1.0.1-macos/bin/licensekit /usr/local/bin/
 ```

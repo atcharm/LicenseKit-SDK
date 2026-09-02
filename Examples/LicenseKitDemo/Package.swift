@@ -40,7 +40,7 @@ let package = Package(
         // In your own app, depend on it by URL instead:
         //
         //   .package(
-        //       url: "https://github.com/gumbracelet/LicenseKit-SDK.git",
+        //       url: "https://github.com/atcharm/LicenseKit-SDK.git",
         //       from: "1.0.0"
         //   )
         //

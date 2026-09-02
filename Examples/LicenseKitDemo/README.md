@@ -30,7 +30,7 @@ matches the release it shipped in. Your app uses the URL form:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/gumbracelet/LicenseKit-SDK.git", from: "1.0.0")
+    .package(url: "https://github.com/atcharm/LicenseKit-SDK.git", from: "1.0.0")
 ],
 targets: [
     .target(name: "YourApp", dependencies: [
