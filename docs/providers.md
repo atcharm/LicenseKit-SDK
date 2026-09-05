@@ -128,12 +128,16 @@ PolarAdapter(
     organizationID: "org-1",
     product: ProductReference(id: "com.example.app"),
     activationLabel: "My App",
-    grantedEntitlements: [Entitlement(id: "export.pdf")]
+    grantedEntitlements: [Entitlement(id: "export.pdf")],
+    offlineGraceInterval: .licenseDays(14),
+    expiryGraceInterval: .licenseDays(5)
 )
 ```
 
-Capabilities: `.full`. Polar models activations as first-class objects with their
-own IDs, so genuine seat release works.
+Capabilities: `.activation`, `.deactivation`, `.refresh`, `.remoteValidation`.
+Polar models activations as first-class objects with their own IDs, so genuine
+seat release works. It enforces activation limits server-side but does not
+return a live seat count, so `.seatAccounting` is intentionally not advertised.
 
 The captured `activation.id` is what makes `deactivate()` possible — without it
 there is no way to name the seat to release. `MachineBindingRule` then ties the
@@ -149,6 +153,12 @@ Mapping:
 | `expires_at` in the past | `.lapsed` |
 | `limit_activations` | `seats.maxActivations` |
 | HTTP 422 mentioning activation | `.seatLimitReached` |
+
+Polar success responses must include the license-key `id` and a non-empty
+`status`; activation responses must also include the activation `id`. Missing
+required identity or status is a malformed response, not an active license.
+Unknown status values are retained as `.unknown` and the connected validator
+fails a live result closed until the SDK understands the new value.
 
 > Endpoints and field names for both adapters reflect each service's public API at
 > the time of writing, and are decoded defensively so an added or renamed optional
@@ -371,15 +381,20 @@ RetryPolicy(
     maximumRetries: 2,
     initialDelay: 0.5,      // doubles each attempt
     maximumDelay: 8,
-    jitterFraction: 0.25    // avoids a thundering herd on reconnect
+    jitterFraction: 0.25,   // avoids a thundering herd on reconnect
+    retryableOperations: [.refresh, .validate]
 )
 
 .default   // the above
 .none      // no retries
 ```
 
-Only transient failures are retried; a settled answer is not worth re-asking. A
-server-supplied `Retry-After` overrides the computed backoff.
+Only transient failures from `retryableOperations` are retried; a settled answer
+is not worth re-asking. The default set contains only `.refresh` and `.validate`.
+Activation and deactivation mutate remote seat state, so a timeout cannot prove
+whether the request was applied and they are not retried by default. A provider
+with idempotency keys may explicitly opt them in. A server-supplied
+`Retry-After` overrides the computed backoff.
 
 The jitter matters more than it looks. Without it, every client knocked offline by
 one outage reconnects in lockstep and retries in lockstep, turning your recovery
@@ -430,6 +445,8 @@ Worth covering explicitly:
 - [ ] A 5xx is transient; a rejection is not.
 - [ ] A response with extra unknown fields still decodes.
 - [ ] A response missing every optional field still decodes.
+- [ ] Required identity/status fields are present; missing fields are malformed,
+      not default-active.
 
 ## Custom transports
 

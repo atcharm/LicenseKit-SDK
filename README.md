@@ -58,7 +58,7 @@ validation, storage, and models at once.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/atcharm/LicenseKit-SDK.git", from: "1.0.1")
+    .package(url: "https://github.com/atcharm/LicenseKit-SDK.git", from: "1.1.0")
 ],
 targets: [
     .target(name: "YourApp", dependencies: [
@@ -79,13 +79,13 @@ If you vendor binary targets by hand rather than depending on the package:
 ```swift
 .binaryTarget(
     name: "LicenseKit",
-    url: "https://github.com/atcharm/LicenseKit-SDK/releases/download/1.0.1/LicenseKit.xcframework.zip",
-    checksum: "b43081c4f4f6eae505ac2a729312c2a0c9266bb0c73af3489003a44b4fd40738"
+    url: "https://github.com/atcharm/LicenseKit-SDK/releases/download/1.1.0/LicenseKit.xcframework.zip",
+    checksum: "3e52483645190dab70afba8221c83d42590abbdabd24d1e952a5dc3049055d9f"
 )
 ```
 
 Every module is published this way. Checksums for all of them are in
-[`checksums.txt`](https://github.com/atcharm/LicenseKit-SDK/releases/download/1.0.1/checksums.txt),
+[`checksums.txt`](https://github.com/atcharm/LicenseKit-SDK/releases/download/1.1.0/checksums.txt),
 attached to each release, and in the `.binaryTarget` entries in `Package.swift`.
 
 </details>
@@ -96,9 +96,9 @@ attached to each release, and in the `.binaryTarget` entries in `Package.swift`.
 You need this only to issue licenses — apps that merely validate them do not.
 
 ```sh
-curl -fsSLO https://github.com/atcharm/LicenseKit-SDK/releases/download/1.0.1/licensekit.artifactbundle.zip
+curl -fsSLO https://github.com/atcharm/LicenseKit-SDK/releases/download/1.1.0/licensekit.artifactbundle.zip
 unzip -q licensekit.artifactbundle.zip
-install licensekit.artifactbundle/licensekit-1.0.1-macos/bin/licensekit /usr/local/bin/
+install licensekit.artifactbundle/licensekit-1.1.0-macos/bin/licensekit /usr/local/bin/
 licensekit --help
 ```
 
@@ -128,28 +128,6 @@ licensekit verify  --in demo.license \
 
 Now change a single byte of `demo.license` in a text editor and run `verify`
 again. That rejection is the whole product.
-
-## Or run the demo app
-
-`Examples/LicenseKitDemo` is a real macOS app that integrates this package the
-same way yours will — through the released XCFrameworks, no source checkout.
-
-```sh
-cd Examples/LicenseKitDemo
-swift run LicenseKitDemo    # the app
-swift test                  # 50 integration tests, no network
-```
-
-It licenses a fictional photo editor, and a stand-in licensing service runs
-in-process so you can break the backend on demand: revoke a purchase, exhaust the
-seats, drop the network, return a malformed body. The Status screen shows the
-rule-by-rule `ValidationReport` behind every verdict, and the Setup screen rebuilds
-the configuration live so you can watch one license be accepted or rejected purely
-because the host changed its mind about verification.
-
-Start reading at `Sources/LicenseKitDemo/DemoRuntime.swift` — that one function is
-the entire integration. See [its README](Examples/LicenseKitDemo/README.md) for a
-guided tour.
 
 ## Quick start
 

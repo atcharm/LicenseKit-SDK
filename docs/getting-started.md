@@ -10,7 +10,7 @@ Add the package in Xcode via **File ▸ Add Package Dependencies…** with
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/atcharm/LicenseKit-SDK.git", from: "1.0.1")
+    .package(url: "https://github.com/atcharm/LicenseKit-SDK.git", from: "1.1.0")
 ],
 targets: [
     .target(name: "YourApp", dependencies: [
@@ -37,9 +37,9 @@ The steps below use `licensekit`, the vendor-side command line tool. You need it
 release:
 
 ```sh
-curl -fsSLO https://github.com/atcharm/LicenseKit-SDK/releases/download/1.0.1/licensekit.artifactbundle.zip
+curl -fsSLO https://github.com/atcharm/LicenseKit-SDK/releases/download/1.1.0/licensekit.artifactbundle.zip
 unzip -q licensekit.artifactbundle.zip
-install licensekit.artifactbundle/licensekit-1.0.1-macos/bin/licensekit /usr/local/bin/
+install licensekit.artifactbundle/licensekit-1.1.0-macos/bin/licensekit /usr/local/bin/
 licensekit --help
 ```
 
